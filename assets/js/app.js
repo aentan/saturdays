@@ -1,5 +1,8 @@
-$(document).ready(function(){
+$(function(){
   
-  // Write your Javascript!
+  // Masthead wallpaper
+  $("#masthead").backstretch("assets/img/wallpaper.png");
+  
+  $('.home-activity').imagefill();
 
 });
