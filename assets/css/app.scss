@@ -1,38 +1,92 @@
-// Customizations BEGIN
-@import "saturdays-bs/bootstrap";
-// Customizations END
+@import "saturdays-bs/variables";
 
 // Core Bootstrap
 @import "bootstrap/bootstrap";
 
+// Customizations BEGIN
+@import "saturdays-bs/bootstrap";
+// Customizations END
+
+//
 // App styles
+// --------------------------------------------------
+
+// Masthead
+// --------------------------------------------------
 
 #masthead {
   height: 528px;
-  h1 {
-    background: url('saturdays_logo.png') no-repeat;
-    background-size: 509px 240px;
-    height: 240px;
-    @include hide-text();
+  #headline {
     left: 50%;
-    margin: -184px 0 0 -255px;
+    margin: -200px 0 0 -255px;
     position: absolute;
     top: 50%;
-    width: 509px;
+    h1 {
+      background: url('saturdays_logo.png') no-repeat;
+      background-size: 509px 240px;
+      height: 240px;
+      @include hide-text();
+      width: 509px;
+    }
+    p {
+      color: white;
+      font-size: 24px;
+      font-weight: bold;
+      margin-top: -24px;
+      text-align: center;
+      -webkit-transform: rotate(350deg);
+      -moz-transform:    rotate(350deg);
+      -ms-transform:     rotate(350deg);
+      -o-transform:      rotate(350deg);
+      transform:         rotate(350deg);
+    }
+  }
+  .btn {
+    position: absolute;
+    right: 16px;
+    top: 16px;
+  }
+  #partners {
+    background: url('partners.png') no-repeat;
+    background-size: 613px 42px;
+    bottom: 32px;
+    height: 42px;
+    left: 50%;
+    margin: 0 0 0 -307px;
+    position: absolute;
+    width: 613px;
   }
 }
 
 @media (max-width: $screen-xs-max) {
   #masthead {
-    height: 240px;
-    h1 {
-      background-size: 255px 120px;
-      height: 120px;
-      margin: -80px 0 0 -128px;
-      width: 255px;
+    height: 368px;
+    #headline {
+      margin: -144px 0 0 -128px;
+      h1 {
+        background-size: 255px 120px;
+        height: 120px;
+        width: 255px;
+      }
+      p {
+        font-size: 18px;
+        margin: -32px 0 0;
+      }
+    }
+    #partners {
+      background: url('partners_xs.png') no-repeat;
+      background-size: 297px 70px;
+      bottom: 24px;
+      height: 70px;
+      margin: 0 0 0 -148px;
+      width: 297px;
     }
   }
 }
+
+
+// Activity selector
+// --------------------------------------------------
 
 #home-activities {
   .home-activity {
@@ -47,8 +101,38 @@
       line-height: 192px;
       position: absolute;
       text-align: center;
+      text-decoration: none;
       width: 100%;
       z-index: $zindex-navbar;
     }
   }
 }
+
+
+// Features
+// --------------------------------------------------
+
+section.feature {
+  padding-bottom: 32px;
+  padding-top: 32px;
+  h2 {
+    margin-bottom: 48px;
+  }
+}
+
+.feature-list {
+  list-style: none;
+  padding: 0 0 0 48px;
+  li {
+    margin-bottom: 32px;
+    .feature-check {
+      background: url('feature_check.png') no-repeat;
+      background-size: 32px 32px;
+      float: left;
+      height: 32px;
+      margin: 0 0 0 -48px;
+      width: 32px;
+    }
+  }
+}
+
