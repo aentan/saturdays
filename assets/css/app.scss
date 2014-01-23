@@ -136,3 +136,13 @@ section.feature {
   }
 }
 
+
+// Footer
+// --------------------------------------------------
+
+body > footer {
+  background: $gray-lighter;
+  margin: 48px 0 0;
+  padding: 48px 0;
+  text-align: center;
+}
