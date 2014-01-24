@@ -16,6 +16,8 @@
 
 #masthead {
   height: 576px;
+  position: relative;
+  z-index: $zindex-popover;
   #headline {
     left: 50%;
     margin: -208px 0 0 -255px;
