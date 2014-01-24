@@ -15,10 +15,10 @@
 // --------------------------------------------------
 
 #masthead {
-  height: 528px;
+  height: 576px;
   #headline {
     left: 50%;
-    margin: -200px 0 0 -255px;
+    margin: -208px 0 0 -255px;
     position: absolute;
     top: 50%;
     h1 {
@@ -49,12 +49,19 @@
   #partners {
     background: url('partners.png') no-repeat;
     background-size: 613px 42px;
-    bottom: 32px;
+    bottom: 80px;
     height: 42px;
     left: 50%;
     margin: 0 0 0 -307px;
     position: absolute;
     width: 613px;
+  }
+  #social {
+    bottom: 0;
+    float: left;
+    left: 50%;
+    margin: 0 0 24px -60px;
+    position: absolute;
   }
 }
 
@@ -76,10 +83,13 @@
     #partners {
       background: url('partners_xs.png') no-repeat;
       background-size: 297px 70px;
-      bottom: 24px;
+      bottom: 48px;
       height: 70px;
       margin: 0 0 0 -148px;
       width: 297px;
+    }
+    #social {
+      margin-bottom: 12px;
     }
   }
 }

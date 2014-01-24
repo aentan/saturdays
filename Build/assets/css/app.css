@@ -5044,10 +5044,10 @@ p {
     background-color: #00c1e9; }
 
 #masthead {
-  height: 528px; }
+  height: 576px; }
   #masthead #headline {
     left: 50%;
-    margin: -200px 0 0 -255px;
+    margin: -208px 0 0 -255px;
     position: absolute;
     top: 50%; }
     #masthead #headline h1 {
@@ -5078,12 +5078,18 @@ p {
   #masthead #partners {
     background: url(../img/partners.png) no-repeat;
     background-size: 613px 42px;
-    bottom: 32px;
+    bottom: 80px;
     height: 42px;
     left: 50%;
     margin: 0 0 0 -307px;
     position: absolute;
     width: 613px; }
+  #masthead #social {
+    bottom: 0;
+    float: left;
+    left: 50%;
+    margin: 0 0 24px -60px;
+    position: absolute; }
 
 @media (max-width: 767px) {
   #masthead {
@@ -5100,10 +5106,12 @@ p {
     #masthead #partners {
       background: url(../img/partners_xs.png) no-repeat;
       background-size: 297px 70px;
-      bottom: 24px;
+      bottom: 48px;
       height: 70px;
       margin: 0 0 0 -148px;
-      width: 297px; } }
+      width: 297px; }
+    #masthead #social {
+      margin-bottom: 12px; } }
 #home-activities .home-activity {
   font-size: 31px;
   height: 192px;
