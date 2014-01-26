@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  
+        <!-- Hammer reload -->
+          <script>
+            setInterval(function(){
+              try {
+                if(typeof ws != 'undefined' && ws.readyState == 1){return true;}
+                ws = new WebSocket('ws://'+(location.host || 'localhost').split(':')[0]+':35353')
+                ws.onopen = function(){ws.onclose = function(){document.location.reload()}}
+                ws.onmessage = function(){
+                  var links = document.getElementsByTagName('link'); 
+                    for (var i = 0; i < links.length;i++) { 
+                    var link = links[i]; 
+                    if (link.rel === 'stylesheet' && !link.href.match(/typekit/)) { 
+                      href = link.href.replace(/((&|\?)hammer=)[^&]+/,''); 
+                      link.href = href + (href.indexOf('?')>=0?'&':'?') + 'hammer='+(new Date().valueOf());
+                    }
+                  }
+                }
+              }catch(e){}
+            }, 1000)
+          </script>
+        <!-- /Hammer reload -->
+      
+  
+  <link rel='stylesheet' href='assets/css/app.css'>
+  
+  <title>Saturdays</title>
+  
+</head>
+
+<body>
+  
+  <div id="fb-root"></div>
+  <script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=1380496228847098";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));</script>
+
+  <div id="masthead">
+    <div class="container">
+      <div id="headline">
+        <h1>Saturdays</h1>
+        <p>みんなで！どこでも！習い事！</p>
+      </div>
+    </div>
+    <!-- <a href="#" class="btn btn-primary">法人様</a> -->
+    <div id="partners"></div>
+    <div id="social">
+      <div class="fb-like" data-href="http://saturdays.jp" data-layout="button_count" data-action="like" data-show-faces="false" data-share="true"></div>
+    </div>
+  </div>
+
+  <div class="container-fluid">
+    <section id="benefit-communication" class="text-center benefit row">
+      <div class="container">
+        <h2>従業員間コミュニケーション増幅</h2>
+        <p>従業員がみんなで運動することにより、コミュニケーションが活性化されます。またSaturdaysのボクササイズにインストラクターと従業員の希望者とのスパーリングを加えるなど、レッスンがより盛り上がる仕掛けを入れております</p>
+      </div>
+    </section>
+    <section id="benefit-health" class="text-center benefit row">
+      <div class="container">
+        <h2>従業員の健康の維持•向上</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce cursus fermentum neque, sit amet rutrum magna dictum ut. Quisque id nulla quis velit facilisis malesuada.</p>
+      </div>
+    </section>
+    <section id="benefit-solidarity" class="text-center benefit row">
+      <div class="container">
+        <h2>従業員間􏰀連帯感􏰀アップ</h2>
+        <p>Sed ac eleifend risus. Nullam eleifend sit amet nunc a bibendum. Donec dui odio, congue in iaculis ut, malesuada nec justo. Nullam placerat pulvinar sapien</p>
+      </div>
+    </section>
+    <section id="benefit-quality" class="text-center benefit row">
+      <h2>従業員􏰀日々􏰀仕事•生活􏰀質􏰀向上</h2>
+      <p>In pellentesque elit ligula. Vivamus quis diam orci. Quisque id ultrices velit. Donec a mattis risus.</p>
+    </section>
+    <section id="benefit-solidarity" class="text-center benefit row">
+      <h2>従業員間􏰀連帯感􏰀アップ</h2>
+      <p>Duis quam turpis, consectetur ac ornare id, mattis vitae erat. Maecenas sit amet mi elit. Phasellus nibh neque, dignissim non consequat commodo</p>
+    </section>
+  </div>
+  
+  <div class="container">
+    <section id="faqs" class="feature row">
+      <div class="text-center col-xs-12">
+        <h2>Saturdaysにできること</h2>
+        <p>Saturdays􏰁経験豊富なトレーナーによる楽しく効果的なレッスンをいつでもどこへでもお届けします</p>
+      </div>
+      <div class="faq col-sm-6">
+        <div class="faq-q">
+          Q: どんなプログラ ムがある􏰀?
+        </div>
+        <div class="faq-a">
+          A: 私􏰀ファイティングエクササイズを始め、ヨガ、タップダンス等多様なプログラムをご用意しますまた、ご要望・目的に応じたプログラム􏰀作成、日ごとに異なるエクササイズ􏰀実施等もご相談いただけます
+        </div>
+      </div>
+      <div class="faq col-sm-6">
+        <div class="faq-q">
+          Q: いつ会社に来て くれる􏰀?
+        </div>
+        <div class="faq-a">
+          A: Saturdays􏰁始業前、終業後、ランチタイ ム等ご相談に応じていつでも、貴社、弊社提携ジム等どこへでも伺わせて頂き ます
+        </div>
+      </div>
+      <div class="faq col-sm-6">
+        <div class="faq-q">
+          Q: 派遣される トレーナー􏰀経 験・レベル􏰁?
+        </div>
+        <div class="faq-a">
+          A: それぞれ􏰀種目で高い専門性と実績 を持ち、且つトレーナーとして􏰀経験 豊富なトレーナーがお伺いします Saturdays􏰁いわ􏰂箱􏰀ないジムです􏰀で、トレーナー􏰀質が生命線ですトレーナー􏰁Saturdays登録段階で選 別し、そ􏰀プログラムに􏰁こだわって いきます
+        </div>
+      </div>
+      <div class="faq col-sm-6">
+        <div class="faq-q">
+          Q: どういった効果 がある􏰀?
+        </div>
+        <div class="faq-a">
+          A: プログラムにもよりますが、心肺機能 􏰀向上を目的としたも􏰀、脂肪燃焼を 目的としたも􏰀、筋肉􏰀増強を目的としたも􏰀、精神的な落ち着きを得られるも􏰀等様々な効果􏰀あるプログラ ムがございます Saturdays􏰀ポリシーとして、そ􏰀どれ もがプログラムを受ける方にとって楽しく継続していけるようなも􏰀であるよ うプログラムを組んでおります
+        </div>
+      </div>
+    </section>
+  </div>
+  <hr>
+  <div class="container">
+    <section id="team" class="feature row">
+      <div class="text-center col-xs-12">
+        <h2>Saturdays􏰀プログラム一部</h2>
+        <p>Saturdays􏰁経験豊富なトレーナーによる楽しく効果的なレッスンをいつでもどこへでもお届けします</p>
+      </div>
+      <div class="text-center team-member col-md-4">
+        <img src="http://placehold.it/160x160">
+        <h3>林 徹</h3>
+      </div>
+      <div class="text-center team-member col-md-4">
+        <img src="http://placehold.it/160x160">
+        <h3>Name</h3>
+      </div>
+      <div class="text-center team-member col-md-4">
+        <img src="http://placehold.it/160x160">
+        <h3>Name</h3>
+      </div>
+      <div class="text-center col-xs-12">
+        <p>上記􏰁プログラムとインストラクター􏰀一例です 現在Saturdays􏰀プロジェクトに賛同した良質なインストラクターが続々と集まってきています</p>
+      </div>
+    </section>
+  </div>
+  
+  <footer>
+    <div class="container">
+      Copyright © 2013 Saturdays Inc. All rights reserved.
+    </div>
+  </footer>
+  
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="js/jquery-1.10.2.min.js"><\/script>')</script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/2.1.0/jquery.imagesloaded.min.js"></script>
+  <script src='assets/js/bootstrap.js'></script>
+<script src='assets/js/jquery.backstretch.min.js'></script>
+<script src='assets/js/jquery-imagefill.js'></script>
+<script src='assets/js/app.js'></script>
+
+</body>
+
+</html>

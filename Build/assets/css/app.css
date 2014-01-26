@@ -5149,6 +5149,13 @@ section.feature {
       margin: 0 0 0 -48px;
       width: 32px; }
 
+section.benefit {
+  padding: 96px; }
+  section.benefit .container {
+    max-width: 768px; }
+  section.benefit h2 {
+    margin-bottom: 48px; }
+
 body > footer {
   background: #eeeeee;
   margin: 48px 0 0;
