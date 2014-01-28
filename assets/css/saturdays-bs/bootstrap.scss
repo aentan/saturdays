@@ -1,6 +1,6 @@
 // Core variables and mixins
 @import "variables";
-//@import "mixins";
+@import "mixins";
 //
 //// Reset
 //@import "normalize";
@@ -8,12 +8,12 @@
 //
 //// Core CSS
 //@import "scaffolding";
-//@import "type";
+@import "type";
 //@import "code";
 //@import "grid";
 //@import "tables";
 //@import "forms";
-//@import "buttons";
+@import "buttons";
 //
 //// Components
 //@import "component-animations";
