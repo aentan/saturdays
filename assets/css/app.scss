@@ -14,8 +14,7 @@
 // Masthead
 // --------------------------------------------------
 
-#masthead,
-#masthead-biz {
+#masthead {
   height: 528px;
   position: relative;
   z-index: $zindex-popover;
@@ -30,15 +29,16 @@
     width: 170px;
   }
   #headline {
+    padding: 0 16px;
     position: absolute;
     text-align: center;
-    top: 168px;
+    top: 152px;
     width: 100%;
     h2 {
       color: white;
       font-size: 96px;
       font-weight: bold;
-      line-height: 96px;
+      line-height: 112px;
     }
     > .btn {
       margin-top: 48px;

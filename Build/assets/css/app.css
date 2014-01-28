@@ -5044,13 +5044,11 @@ p {
     color: #fff200;
     background-color: #00c1e9; }
 
-#masthead,
-#masthead-biz {
+#masthead {
   height: 528px;
   position: relative;
   z-index: 1010; }
-  #masthead h1,
-  #masthead-biz h1 {
+  #masthead h1 {
     background: url(../img/saturdays_logo.png) no-repeat;
     background-size: 170px 80px;
     height: 80px;
@@ -5063,23 +5061,20 @@ p {
     position: absolute;
     top: 16px;
     width: 170px; }
-  #masthead #headline,
-  #masthead-biz #headline {
+  #masthead #headline {
+    padding: 0 16px;
     position: absolute;
     text-align: center;
-    top: 168px;
+    top: 152px;
     width: 100%; }
-    #masthead #headline h2,
-    #masthead-biz #headline h2 {
+    #masthead #headline h2 {
       color: white;
       font-size: 96px;
       font-weight: bold;
-      line-height: 96px; }
-    #masthead #headline > .btn,
-    #masthead-biz #headline > .btn {
+      line-height: 112px; }
+    #masthead #headline > .btn {
       margin-top: 48px; }
-  #masthead .backstretch:before,
-  #masthead-biz .backstretch:before {
+  #masthead .backstretch:before {
     background-color: #000;
     content: '';
     height: 100%;
@@ -5088,13 +5083,11 @@ p {
     position: absolute;
     top: 0;
     width: 100%; }
-  #masthead > .btn,
-  #masthead-biz > .btn {
+  #masthead > .btn {
     position: absolute;
     right: 16px;
     top: 16px; }
-  #masthead #social,
-  #masthead-biz #social {
+  #masthead #social {
     bottom: 0;
     float: left;
     left: 50%;
