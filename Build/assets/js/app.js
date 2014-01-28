@@ -2,7 +2,7 @@ $(function(){
   
   // Masthead wallpaper
   $("#masthead").backstretch("assets/img/wallpaper.png");
-  $("#masthead-biz").backstretch("assets/img/wallpaper_biz.jpg");
+  $("#masthead-biz").backstretch("assets/img/wallpaper_biz2.jpg");
 
   // Benefit backgrounds
   $('.benefit').each(function() {
