@@ -14,49 +14,41 @@
 // Masthead
 // --------------------------------------------------
 
-#masthead {
-  height: 576px;
+#masthead,
+#masthead-biz {
+  height: 528px;
   position: relative;
   z-index: $zindex-popover;
-  #headline {
-    left: 50%;
-    margin: -208px 0 0 -255px;
+  h1 {
+    background: url('saturdays_logo.png') no-repeat;
+    background-size: 170px 80px;
+    height: 80px;
+    @include hide-text();
+    left: 32px;
     position: absolute;
-    top: 50%;
-    h1 {
-      background: url('saturdays_logo_cs.png') no-repeat;
-      background-size: 509px 240px;
-      height: 240px;
-      @include hide-text();
-      width: 509px;
-    }
-    p {
+    top: 16px;
+    width: 170px;
+  }
+  #headline {
+    position: absolute;
+    text-align: center;
+    top: 168px;
+    width: 100%;
+    h2 {
       color: white;
-      font-size: 24px;
+      font-size: 96px;
       font-weight: bold;
-      margin-top: -24px;
-      text-align: center;
-      -webkit-transform: rotate(350deg);
-      -moz-transform:    rotate(350deg);
-      -ms-transform:     rotate(350deg);
-      -o-transform:      rotate(350deg);
-      transform:         rotate(350deg);
+      line-height: 96px;
+    }
+    > .btn {
+      margin-top: 48px;
     }
   }
-  .btn {
+  
+  > .btn {
     position: absolute;
     right: 16px;
     top: 16px;
-  }
-  #partners {
-    background: url('partners.png') no-repeat;
-    background-size: 613px 42px;
-    bottom: 80px;
-    height: 42px;
-    left: 50%;
-    margin: 0 0 0 -307px;
-    position: absolute;
-    width: 613px;
   }
   #social {
     bottom: 0;
@@ -67,31 +59,54 @@
   }
 }
 
-@media (max-width: $screen-xs-max) {
-  #masthead {
-    height: 368px;
-    #headline {
-      margin: -144px 0 0 -128px;
-      h1 {
-        background-size: 255px 120px;
-        height: 120px;
-        width: 255px;
-      }
-      p {
-        font-size: 18px;
-        margin: -32px 0 0;
-      }
+#partners {
+  background: $brand-primary;
+  color: white;
+  height: 192px;
+  padding: 48px 0; 
+  #partner-logos {
+    background: url('partners.png') no-repeat;
+    background-size: 613px 42px;
+    height: 42px;
+    margin: 0 auto 32px;
+    width: 613px;
+    & + p {
+      text-align: center;
     }
-    #partners {
-      background: url('partners_xs.png') no-repeat;
-      background-size: 297px 70px;
-      bottom: 48px;
-      height: 70px;
-      margin: 0 0 0 -148px;
-      width: 297px;
+  }
+}
+
+@media (max-width: $screen-xs-max) {
+  #masthead,
+  #masthead-biz {
+    height: 368px;
+    h1 {
+      left: 16px;
+      top: 0;
+    }
+    #headline {
+      top: 128px;
+      h2 {
+        font-size: 48px;
+        line-height: 48px;
+      }
+      > .btn {
+        margin-top: 8px;
+      }
     }
     #social {
       margin-bottom: 12px;
+    }
+  }
+  #partners {
+    padding: 32px;
+    height: 176px;
+    #partner-logos {
+      background: url('partners_xs.png') no-repeat;
+      background-size: 297px 70px;
+      height: 70px;
+       margin: 0 auto 16px;
+      width: 297px;
     }
   }
 }
@@ -124,12 +139,25 @@
 // Features
 // --------------------------------------------------
 
-section.feature {
-  padding-bottom: 32px;
-  padding-top: 32px;
+.feature {
+  color: $brand-primary;
+  padding-bottom: 48px;
+  padding-top: 48px;
   h2 {
     margin-bottom: 48px;
   }
+}
+
+.btn + .feature {
+  padding-top: 80px;
+}
+
+.feature + .btn {
+  left: 50%;
+  margin: -27px 0 0 -96px;
+  position: absolute;
+  width: 192px;
+  z-index: 100;
 }
 
 .feature-list {
@@ -152,13 +180,96 @@ section.feature {
 // Benefits
 // --------------------------------------------------
 
-section.benefit {
-  padding: 96px;
+.benefit {
+  background-color: $brand-primary;
+  overflow: visible;
+  padding: 48px 0 80px;
+  position: relative;
+  text-align: center;
   .container {
-    max-width: 768px;
+    max-width: 720px;
+  }
+  .benefit-icon {
+    background: url('benefit_icon_sprite.png');
+    background-size: 320px 320px;
+    height: 160px;
+    margin: 0 auto;
+    width: 160px;
   }
   h2 {
-    margin-bottom: 48px;
+    color: white;
+    margin-bottom: 32px;
+  }
+  p {
+    color: white;
+  }
+  .backstretch:before {
+    background-color: #000;
+    content: '';
+    height: 100%;
+    left: 0;
+    opacity: 0.24;
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+  + .btn {
+    left: 50%;
+    margin: -27px 0 0 -96px;
+    position: absolute;
+    width: 192px;
+    z-index: 100;
+  }
+}
+
+.benefit + .benefit {
+  padding: 80px 0;
+}
+
+#benefit-communication .benefit-icon {
+  background-position: 0 0;
+}
+
+#benefit-health .benefit-icon {
+  background-position: 160px 0;
+}
+
+#benefit-solidarity .benefit-icon {
+  background-position: 0 160px;
+}
+
+#benefit-quality .benefit-icon {
+  background-position: 160px 160px;
+}
+
+
+// Trainers
+// --------------------------------------------------
+
+#sample-trainers {
+  background-color: #f5f5f5;
+  h3 {
+    font-size: $font-size-base;
+    font-weight: normal;
+  }
+}
+
+
+// FAQs
+// --------------------------------------------------
+
+.faq {
+  padding: 0 40px 0 64px;
+  h3 {
+    margin: 0 0 12px;
+  }
+  .aq {
+    display: block;
+    float: left;
+    font-size: $font-size-h3;
+    font-weight: $headings-font-weight;
+    margin: 0 0 0 -40px;
+    width: 40px;
   }
 }
 
