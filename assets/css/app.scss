@@ -44,7 +44,7 @@
       margin-top: 48px;
     }
   }
-  .backstretch:before {
+  &.dim .backstretch:before {
     background-color: #000;
     content: '';
     height: 100%;

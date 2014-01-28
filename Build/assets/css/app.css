@@ -5074,7 +5074,7 @@ p {
       line-height: 112px; }
     #masthead #headline > .btn {
       margin-top: 48px; }
-  #masthead .backstretch:before {
+  #masthead.dim .backstretch:before {
     background-color: #000;
     content: '';
     height: 100%;
