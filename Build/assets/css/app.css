@@ -5048,6 +5048,13 @@ p {
   height: 528px;
   position: relative;
   z-index: 1010; }
+  #masthead.home {
+    height: 416px; }
+    #masthead.home #headline {
+      top: 144px; }
+      #masthead.home #headline h2 {
+        font-size: 64px;
+        line-height: 80px; }
   #masthead h1 {
     background: url(../img/saturdays_logo.png) no-repeat;
     background-size: 170px 80px;
@@ -5109,25 +5116,21 @@ p {
       text-align: center; }
 
 @media (max-width: 767px) {
-  #masthead,
-  #masthead-biz {
+  #masthead {
     height: 368px; }
-    #masthead h1,
-    #masthead-biz h1 {
+    #masthead.home {
+      height: 480px; }
+    #masthead h1 {
       left: 16px;
       top: 0; }
-    #masthead #headline,
-    #masthead-biz #headline {
+    #masthead #headline {
       top: 128px; }
-      #masthead #headline h2,
-      #masthead-biz #headline h2 {
+      #masthead #headline h2 {
         font-size: 48px;
         line-height: 48px; }
-      #masthead #headline > .btn,
-      #masthead-biz #headline > .btn {
+      #masthead #headline > .btn {
         margin-top: 8px; }
-    #masthead #social,
-    #masthead-biz #social {
+    #masthead #social {
       margin-bottom: 12px; }
 
   #partners {
