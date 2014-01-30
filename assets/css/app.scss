@@ -18,6 +18,16 @@
   height: 528px;
   position: relative;
   z-index: $zindex-popover;
+  &.home {
+    height: 416px;
+    #headline {
+      top: 144px;
+      h2 {
+        font-size: 64px;
+        line-height: 80px;
+      }
+    }
+  }
   h1 {
     background: url('saturdays_logo.png') no-repeat;
     background-size: 170px 80px;
@@ -87,9 +97,11 @@
 }
 
 @media (max-width: $screen-xs-max) {
-  #masthead,
-  #masthead-biz {
+  #masthead {
     height: 368px;
+    &.home {
+      height: 480px;
+    }
     h1 {
       left: 16px;
       top: 0;
