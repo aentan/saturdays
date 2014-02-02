@@ -1,7 +1,7 @@
 $(function(){
 
   // Backgrounds
-  $('#masthead, .benefit').each(function() {
+  $('.masthead, .benefit, .item-image').each(function() {
     $b = $(this);
     if ($b.data('background')) {
       $b.backstretch($b.data('background'));

@@ -5044,18 +5044,18 @@ p {
     color: #fff200;
     background-color: #00c1e9; }
 
-#masthead {
+.masthead {
   height: 528px;
   position: relative;
   z-index: 1010; }
-  #masthead.home {
+  .masthead.home {
     height: 416px; }
-    #masthead.home #headline {
+    .masthead.home #headline {
       top: 144px; }
-      #masthead.home #headline h2 {
+      .masthead.home #headline h2 {
         font-size: 64px;
         line-height: 80px; }
-  #masthead h1 {
+  .masthead h1 {
     background: url(../img/saturdays_logo.png) no-repeat;
     background-size: 170px 80px;
     height: 80px;
@@ -5068,38 +5068,43 @@ p {
     position: absolute;
     top: 16px;
     width: 170px; }
-  #masthead #headline {
+  .masthead #headline {
     padding: 0 16px;
     position: absolute;
     text-align: center;
     top: 152px;
     width: 100%; }
-    #masthead #headline h2 {
+    .masthead #headline h2 {
       color: white;
       font-size: 96px;
       font-weight: bold;
       line-height: 112px; }
-    #masthead #headline > .btn {
+    .masthead #headline p {
+      color: white;
+      line-height: 28px;
+      padding: 0 16px; }
+    .masthead #headline > .btn {
       margin-top: 48px; }
-  #masthead.dim .backstretch:before {
-    background-color: #000;
-    content: '';
-    height: 100%;
-    left: 0;
-    opacity: 0.24;
-    position: absolute;
-    top: 0;
-    width: 100%; }
-  #masthead > .btn {
+  .masthead > .btn {
     position: absolute;
     right: 16px;
     top: 16px; }
-  #masthead #social {
+  .masthead #social {
     bottom: 0;
     float: left;
     left: 50%;
     margin: 0 0 24px -60px;
     position: absolute; }
+
+.dim .backstretch:before {
+  background-color: #000;
+  content: '';
+  height: 100%;
+  left: 0;
+  opacity: 0.24;
+  position: absolute;
+  top: 0;
+  width: 100%; }
 
 #partners {
   background: #00c1e9;
@@ -5116,21 +5121,23 @@ p {
       text-align: center; }
 
 @media (max-width: 767px) {
-  #masthead {
+  .masthead {
     height: 368px; }
-    #masthead.home {
+    .masthead.home {
       height: 480px; }
-    #masthead h1 {
+    .masthead.category #headline {
+      top: 96px; }
+    .masthead h1 {
       left: 16px;
       top: 0; }
-    #masthead #headline {
+    .masthead #headline {
       top: 128px; }
-      #masthead #headline h2 {
+      .masthead #headline h2 {
         font-size: 48px;
         line-height: 48px; }
-      #masthead #headline > .btn {
+      .masthead #headline > .btn {
         margin-top: 8px; }
-    #masthead #social {
+    .masthead #social {
       margin-bottom: 12px; }
 
   #partners {
@@ -5258,6 +5265,33 @@ p {
     font-weight: bold;
     margin: 0 0 0 -40px;
     width: 40px; }
+
+.listing {
+  background-color: #f5f5f5;
+  padding-bottom: 32px;
+  padding-top: 32px; }
+  .listing .item {
+    background-color: white;
+    border: 1px solid #eeeeee;
+    border-radius: 4px;
+    margin-bottom: 32px; }
+    .listing .item .item-image {
+      border-top-right-radius: 4px;
+      border-top-left-radius: 4px;
+      height: 160px;
+      position: relative; }
+      .listing .item .item-image img, .listing .item .item-image .backstretch {
+        border-top-right-radius: 4px;
+        border-top-left-radius: 4px; }
+      .listing .item .item-image h3 {
+        bottom: 16px;
+        color: white;
+        font-size: 18px;
+        left: 16px;
+        margin: 0;
+        position: absolute; }
+    .listing .item .item-info {
+      padding: 12px 16px; }
 
 body > footer {
   background: #eeeeee;
