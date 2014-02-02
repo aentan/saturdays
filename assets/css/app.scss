@@ -14,7 +14,7 @@
 // Masthead
 // --------------------------------------------------
 
-#masthead {
+.masthead {
   height: 528px;
   position: relative;
   z-index: $zindex-popover;
@@ -50,19 +50,14 @@
       font-weight: bold;
       line-height: 112px;
     }
+    p {
+      color: white;
+      line-height: 28px;
+      padding: 0 16px;
+    }
     > .btn {
       margin-top: 48px;
     }
-  }
-  &.dim .backstretch:before {
-    background-color: #000;
-    content: '';
-    height: 100%;
-    left: 0;
-    opacity: 0.24;
-    position: absolute;
-    top: 0;
-    width: 100%;
   }
   
   > .btn {
@@ -77,6 +72,17 @@
     margin: 0 0 24px -60px;
     position: absolute;
   }
+}
+
+.dim .backstretch:before {
+  background-color: #000;
+  content: '';
+  height: 100%;
+  left: 0;
+  opacity: 0.24;
+  position: absolute;
+  top: 0;
+  width: 100%;
 }
 
 #partners {
@@ -97,10 +103,15 @@
 }
 
 @media (max-width: $screen-xs-max) {
-  #masthead {
+  .masthead {
     height: 368px;
     &.home {
       height: 480px;
+    }
+    &.category {
+      #headline {
+        top: 96px;
+      }
     }
     h1 {
       left: 16px;
@@ -300,6 +311,41 @@
     font-weight: $headings-font-weight;
     margin: 0 0 0 -40px;
     width: 40px;
+  }
+}
+
+
+// Listings
+// --------------------------------------------------
+
+.listing {
+  background-color: #f5f5f5;
+  padding-bottom: 32px;
+  padding-top: 32px;
+  .item {
+    background-color: white;
+    border: 1px solid $gray-lighter;
+    border-radius: $border-radius-base;
+    margin-bottom: 32px;
+    .item-image {
+      @include border-top-radius($border-radius-base);
+      height: 160px;
+      position: relative;
+      img, .backstretch {
+        @include border-top-radius($border-radius-base);
+      }
+      h3 {
+        bottom: 16px;
+        color: white;
+        font-size: $font-size-base;
+        left: 16px;
+        margin: 0;
+        position: absolute;
+      }
+    }
+    .item-info {
+      padding: 12px 16px;
+    }
   }
 }
 
