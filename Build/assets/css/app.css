@@ -5055,6 +5055,14 @@ p {
       .masthead.home #headline h2 {
         font-size: 64px;
         line-height: 80px; }
+  .masthead.trainer {
+    height: 112px; }
+    .masthead.trainer h1 {
+      background-size: 128px 60px;
+      height: 60px;
+      left: 32px;
+      top: 8px;
+      width: 128px; }
   .masthead h1 {
     background: url(../img/saturdays_logo.png) no-repeat;
     background-size: 170px 80px;
@@ -5292,6 +5300,27 @@ p {
         position: absolute; }
     .listing .item .item-info {
       padding: 12px 16px; }
+
+.trainer-info .container {
+  padding-top: 16px;
+  padding-bottom: 16px; }
+.trainer-info + hr {
+  margin: 0; }
+
+#trainer-image img {
+  margin-bottom: 16px; }
+
+.trainer-meta h3 {
+  font-size: 18px; }
+.trainer-meta p {
+  font-size: 23px;
+  margin: 0; }
+.trainer-meta small {
+  font-size: 16px; }
+
+#steps h4 {
+  font-size: 18px;
+  margin-bottom: 16px; }
 
 body > footer {
   background: #eeeeee;

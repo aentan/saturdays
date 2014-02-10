@@ -28,6 +28,16 @@
       }
     }
   }
+  &.trainer {
+    height: 112px;
+    h1 {
+      background-size: 128px 60px;
+      height: 60px;
+      left: 32px;
+      top: 8px;
+      width: 128px;
+    }
+  }
   h1 {
     background: url('saturdays_logo.png') no-repeat;
     background-size: 170px 80px;
@@ -346,6 +356,46 @@
     .item-info {
       padding: 12px 16px;
     }
+  }
+}
+
+
+// Trainer
+// --------------------------------------------------
+
+.trainer-info {
+  .container {
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
+  & + hr {
+    margin: 0;
+  }
+}
+
+#trainer-image {
+  img {
+    margin-bottom: 16px;
+  }
+}
+
+.trainer-meta {
+  h3 {
+    font-size: $font-size-base;
+  }
+  p {
+    font-size: $font-size-large;
+    margin: 0;
+  }
+  small {
+    font-size: $font-size-small;
+  }
+}
+
+#steps {
+  h4 {
+    font-size: $font-size-base;
+    margin-bottom: 16px;
   }
 }
 
