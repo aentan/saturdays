@@ -10,4 +10,16 @@ $(function(){
   
   $('.home-activity').imagefill();
 
+  // collagePlus-ify it!
+  function collage() {
+    $('.collage').collagePlus();
+  } collage();
+
+  var resizeTimer = null;
+  $(window).bind('resize', function() {
+    // set a timer to re-apply the plugin
+    if (resizeTimer) clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(collage, 200);
+  });
+
 });
